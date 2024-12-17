@@ -1,0 +1,9 @@
+.bnr{
+    left:0;
+    right: 0;
+    backdrop-filter:calc(100px);
+}
+.banner-bg-img{
+    background: url("../../../../assets/city-being-2.jpg");
+    background-size: cover;
+}
