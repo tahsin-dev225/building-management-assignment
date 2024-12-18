@@ -9,7 +9,7 @@ const ApartmentCard = ({apartment}) => {
                 <img className='h-full w-full rounded-t-xl ' src={apartment.image} alt="" />
             </div>
             <div className="p-3 bg-slate-50 text-slate-800 flex flex-col">
-                <h1 className="text-3xl text-[#2DB0BC]  my-3 font-medium">{apartment?.location}</h1>
+                <h1 className="md:text-3xl text-lg text-[#2DB0BC]  my-3 font-medium">{apartment?.location}</h1>
                 <p className="my-1 line-clamp-2">{apartment.description}</p>
                 <div className="flex font-semibold flex-grow my-3 px-4 text-red-700 justify-between">
                     <p className="font-bold text-xl">{apartment.price } $</p>
