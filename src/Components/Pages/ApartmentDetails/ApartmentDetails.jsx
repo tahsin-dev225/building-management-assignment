@@ -26,7 +26,8 @@ const ApartmentDetails = () => {
         if(user && user.email){
             axiosSecure.post('/bookings', bookingApartment)
             .then(res =>{
-                if(res.insertedId){
+                console.log(res)
+                if(res.data.insertedId){
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
