@@ -11,7 +11,6 @@ import Login from './Components/Pages/Register/Login.jsx';
 import SignUp from './Components/Pages/Register/SignUp.jsx';
 import AuthProvider from './Components/Pages/Provider/AuthProvider.jsx';
 import ApartmentDetails from './Components/Pages/ApartmentDetails/ApartmentDetails.jsx';
-import axios from 'axios';
 import Dashboard from './Components/Layout/Dashboard.jsx';
 import AddApartment from './Components/Pages/Dashboard/Admin/AddApartments/AddApartment.jsx';
 import PrivateRoute from './Router/PrivateRoute.jsx';
@@ -50,7 +49,7 @@ const router = createBrowserRouter([
       {
         path: '/apartmentDetails/:id',
         element:<PrivateRoute><ApartmentDetails></ApartmentDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`https://building-management-assignment-server.onrender.com/${params.id}`,{credentials : "include"})
+        loader: ({params}) => fetch(`https://building-management-assignment-server.onrender.com/apartmentDetails/${params.id}`,{credentials : "include"})
       }
     ]
   },
