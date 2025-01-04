@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: '/apartmentDetails/:id',
         element:<PrivateRoute><ApartmentDetails></ApartmentDetails></PrivateRoute>,
-        loader: ({params}) => axios.get(`https://building-management-assignment-server.onrender.com/${params.id}`, {withCredentials : true})
+        loader: ({params}) => fetch(`https://building-management-assignment-server.onrender.com/${params.id}`,{credentials : "include"})
       }
     ]
   },
